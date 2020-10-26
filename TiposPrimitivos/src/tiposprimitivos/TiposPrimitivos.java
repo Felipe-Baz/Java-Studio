@@ -53,8 +53,10 @@ public class TiposPrimitivos {
         System.out.println("Recebimento de infos pelo usuario!");
         
         Scanner teclado = new Scanner(System.in);
+        System.out.print("Digite o nome do aluno: ");
         String nomeT = teclado.nextLine();
+        System.out.print("Digite a nota do aluno: ");
         float notaT = teclado.nextFloat();
-        System.out.format("Anota do %s é de %.1f\n",nomeT, notaT);
+        System.out.format("A nota do %s é de %.1f \n",nomeT, notaT);
     }
 }
