@@ -9,7 +9,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="olamundojavafx.FXMLDocumentController">
     <children>
-        <Button fx:id="btnclick" layoutX="128.0" layoutY="116.0" onAction="#clicouBotao" text="Clique em mim!" />
+        <Button fx:id="btnclick" layoutX="111.0" layoutY="117.0" onAction="#clicouBotao" text="Clique em mim!" />
         <Label fx:id="ldlMensagem" alignment="CENTER" layoutX="80.0" layoutY="56.0" minHeight="16" minWidth="69" prefHeight="44.0" prefWidth="161.0" text="Mensagem" textAlignment="CENTER">
          <font>
             <Font size="15.0" />
