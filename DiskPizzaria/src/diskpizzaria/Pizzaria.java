@@ -14,7 +14,7 @@ import java.util.Scanner;
 public class Pizzaria {
     Cadastro cadastro = new Cadastro();
     
-    private void Pedido(){
+    public void Pedido(){
         Scanner teclado = new Scanner(System.in);
         Integer id;
         Integer id_buscado = 0;
@@ -42,64 +42,70 @@ public class Pizzaria {
         Chocolate.setIngredientesCardapio(5, "Não", "Não", "Não", "Não",
                 "Não", "Não", "Sim", "Sim");
         
-        //mostra cardapio
-        Pizza[] Cardapio = new Pizza[5];
-        
-        System.out.println("=-=-=-=-=-=-=-=-=-=-=");
-        System.out.println("      Cardapio");
-        System.out.println("=-=-=-=-=-=-=-=-=-=-=");
-        System.out.println("");
-        
-        id = Queijo.getId_pizza();
-        System.out.println("pizza de queijo id: " + id);
-        System.out.println("");
-        System.out.println("Ingredientes:");
-        System.out.println("");
-        Queijo.getIngredientes();
-        Cardapio[0] = Queijo;
-        
-        id = AlhoETomate.getId_pizza();
-        System.out.println("pizza de Alho e Tomate id: " + id);
-        System.out.println("");
-        System.out.println("Ingredientes:");
-        System.out.println("");
-        AlhoETomate.getIngredientes();
-        Cardapio[1] = AlhoETomate;
-        
-        id = Frango.getId_pizza();
-        System.out.println("pizza de Frango id: " + id);
-        System.out.println("");
-        System.out.println("Ingredientes:");
-        System.out.println("");
-        Frango.getIngredientes();
-        Cardapio[2] = Frango;
-        
-        id = Pepperoni.getId_pizza();
-        System.out.println("pizza de Pepperoni id: " + id);
-        System.out.println("");
-        System.out.println("Ingredientes:");
-        System.out.println("");
-        Pepperoni.getIngredientes();
-        Cardapio[3] = Pepperoni;
-        
-        id = Chocolate.getId_pizza();
-        System.out.println("pizza de Chocolate id: " + id);
-        System.out.println("");
-        System.out.println("Ingredientes:");
-        System.out.println("");
-        Chocolate.getIngredientes();
-        Cardapio[4] = Chocolate;
-        
         int numPizzas;
+        System.out.println("");
         System.out.printf("Informe um número de pizzas desejadas: ");
         System.out.println("");
         numPizzas = teclado.nextInt();
         cond = teclado.nextLine();
         
+        //mostra cardapio
+        Pizza[] Cardapio = new Pizza[5];
+        
+        
+        
+        
         Pizza[] pedido = new Pizza[numPizzas];
         
         for(int i = 0; i < numPizzas; i++)
         {
+            System.out.println("");
+            System.out.println("=-=-=-=-=-=-=-=-=-=-=");
+            System.out.println("      Cardapio");
+            System.out.println("=-=-=-=-=-=-=-=-=-=-=");
+            System.out.println("");
+
+            id = Queijo.getId_pizza();
+            System.out.println("pizza de queijo id: " + id);
+            System.out.println("");
+            System.out.println("Ingredientes:");
+            System.out.println("");
+            Queijo.getIngredientes();
+            Cardapio[0] = Queijo;
+
+            id = AlhoETomate.getId_pizza();
+            System.out.println("pizza de Alho e Tomate id: " + id);
+            System.out.println("");
+            System.out.println("Ingredientes:");
+            System.out.println("");
+            AlhoETomate.getIngredientes();
+            Cardapio[1] = AlhoETomate;
+
+            id = Frango.getId_pizza();
+            System.out.println("pizza de Frango id: " + id);
+            System.out.println("");
+            System.out.println("Ingredientes:");
+            System.out.println("");
+            Frango.getIngredientes();
+            Cardapio[2] = Frango;
+
+            id = Pepperoni.getId_pizza();
+            System.out.println("pizza de Pepperoni id: " + id);
+            System.out.println("");
+            System.out.println("Ingredientes:");
+            System.out.println("");
+            Pepperoni.getIngredientes();
+            Cardapio[3] = Pepperoni;
+
+            id = Chocolate.getId_pizza();
+            System.out.println("pizza de Chocolate id: " + id);
+            System.out.println("");
+            System.out.println("Ingredientes:");
+            System.out.println("");
+            Chocolate.getIngredientes();
+            Cardapio[4] = Chocolate;
+
+            
             System.out.println("é uma pizza do cardapio? [Sim ou Não]");
             cond = teclado.nextLine();
             
@@ -189,24 +195,4 @@ public class Pizzaria {
         
     }
     
-    public void diskPizza(String Telefone)
-    {
-        
-        String telefone = cadastro.getTelefone();
-        if(telefone == null ? Telefone != null : !telefone.equals(Telefone)){
-            System.out.println("Não cadastrado");
-            Scanner teclado = new Scanner(System.in);
-            
-            System.out.println("Informe seu nome:");
-            String Nome = teclado.nextLine();
-            System.out.println("Informe seu CPF");
-            String Cpf = teclado.nextLine();
-            
-            cadastro.cadastra(Nome, Telefone, Cpf);
-            Pedido();
-        }else{
-            System.out.println("já cadastrado");
-            Pedido();
-        }
-    }
 }
