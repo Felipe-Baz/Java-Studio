@@ -19,12 +19,20 @@ public class Gerenciador {
     public static void main(String[] args) {
         // TODO code application logic here
         Pizzaria pizzaria = new Pizzaria();
+        
+        
+        
         Scanner teclado = new Scanner(System.in);
+        
+        
+        
+        
         Cadastro[] Gerenciador = new Cadastro[90];
         int numCadastros = 0;
         int cadastrado = 0; //condicional: se = 0, não cadastrado.
         while(true)
         {
+            
             System.out.println("Informe seu telefone");
             String telefone = teclado.nextLine();   
             System.out.println("");
